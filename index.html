@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090716">
+<title>Tiffany Brooke | Digital Creator</title>
+<meta name="description" content="Explore the creative projects, digital guides, lake maps, and crystal resources of Tiffany Brooke.">
+
+<style>
+:root {
+  --bg: #090716;
+  --panel: #151027;
+  --teal: #00f5dc;
+  --pink: #ff36b8;
+  --purple: #a855f7;
+  --lime: #c6ff35;
+  --white: #f8f5ff;
+  --muted: #b9aecb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 10% 5%, #153b49 0, transparent 35%),
+    radial-gradient(ellipse at 90% 25%, #42134b 0, transparent 35%),
+    var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
+
+header {
+  padding: 24px 0;
+  border-bottom: 1px solid #ffffff18;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--teal);
+  text-shadow: 0 0 15px #00f5dc80;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: .9rem;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--pink);
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px 85px;
+}
+
+.eyebrow {
+  color: var(--lime);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: .75rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  line-height: 1.02;
+  font-weight: 900;
+  letter-spacing: -3px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--teal), var(--pink), var(--purple), var(--lime));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 25px auto 30px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 50px;
+  background: linear-gradient(100deg, var(--teal), var(--purple), var(--pink));
+  color: #090716;
+  font-weight: 900;
+  box-shadow: 0 0 25px #00f5dc35;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px #ff36b880;
+}
+
+section {
+  padding: 65px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 10px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.project-card {
+  background: linear-gradient(145deg, #1b1530, #100d20);
+  border: 1px solid #ffffff20;
+  border-radius: 22px;
+  padding: 28px;
+  transition: transform .25s, border-color .25s;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--teal);
+}
+
+.project-card:nth-child(2):hover {
+  border-color: var(--pink);
+}
+
+.project-card:nth-child(3):hover {
+  border-color: var(--purple);
+}
+
+.project-card:nth-child(4):hover {
+  border-color: var(--lime);
+}
+
+.project-number {
+  color: var(--teal);
+  font-size: .75rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.project-card h3 {
+  font-size: 1.55rem;
+  margin: 12px 0;
+}
+
+.project-card p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.project-link {
+  color: var(--teal);
+  font-weight: bold;
+}
+
+.project-card:nth-child(2) .project-link {
+  color: var(--pink);
+}
+
+.project-card:nth-child(3) .project-link {
+  color: #c084fc;
+}
+
+.project-card:nth-child(4) .project-link {
+  color: var(--lime);
+}
+
+.about-panel {
+  background: linear-gradient(120deg, #102d35, #24112e, #25132e);
+  border: 1px solid #ffffff20;
+  border-radius: 25px;
+  padding: 45px;
+  text-align: center;
+}
+
+.about-panel p {
+  color: var(--muted);
+  max-width: 720px;
+  margin: 15px auto 0;
+}
+
+.contact {
+  text-align: center;
+}
+
+footer {
+  border-top: 1px solid #ffffff18;
+  padding: 30px 15px;
+  text-align: center;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+@media (max-width: 650px) {
+  .nav-links {
+    gap: 12px;
+    font-size: .8rem;
+  }
+
+  .hero {
+    padding: 75px 10px 60px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-panel {
+    padding: 30px 22px;
+  }
+}
+</style>
+</head>
