@@ -1,29 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#090716">
-<title>Tiffany Brooke | Digital Creator</title>
-<meta name="description" content="Explore the creative projects, digital guides, lake maps, and crystal resources of Tiffany Brooke.">
+<title>Tiffany Brooke | Creative Portfolio</title>
+
+<meta name="description" content="Explore the creative world of Tiffany Brooke — lake life, digital projects, crystals, and more.">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg: #090716;
-  --panel: #151027;
-  --teal: #00f5dc;
-  --pink: #ff36b8;
+  --teal: #00f5d4;
+  --pink: #ff36b7;
   --purple: #a855f7;
-  --lime: #c6ff35;
-  --white: #f8f5ff;
-  --muted: #b9aecb;
+  --lime: #c6ff00;
+  --dark: #090914;
+  --card: #151526;
+  --white: #f8f7ff;
+  --muted: #b8b5ce;
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -31,13 +32,23 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(ellipse at 10% 5%, #153b49 0, transparent 35%),
-    radial-gradient(ellipse at 90% 25%, #42134b 0, transparent 35%),
-    var(--bg);
+  background: var(--dark);
   color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 15%, #00f5d41c, transparent 30%),
+    radial-gradient(circle at 85% 25%, #ff36b71c, transparent 30%),
+    radial-gradient(circle at 50% 90%, #a855f71c, transparent 35%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 a {
@@ -52,7 +63,7 @@ a {
 
 header {
   padding: 24px 0;
-  border-bottom: 1px solid #ffffff18;
+  border-bottom: 1px solid #ffffff14;
 }
 
 nav {
@@ -63,18 +74,18 @@ nav {
 }
 
 .logo {
-  font-size: 1.25rem;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 900;
+  font-size: 1.2rem;
   letter-spacing: 2px;
   color: var(--teal);
-  text-shadow: 0 0 15px #00f5dc80;
+  text-shadow: 0 0 15px #00f5d477;
 }
 
 .nav-links {
   display: flex;
-  gap: 22px;
-  flex-wrap: wrap;
-  font-size: .9rem;
+  gap: 24px;
+  font-size: 0.85rem;
   color: var(--muted);
 }
 
@@ -91,20 +102,25 @@ nav {
   color: var(--lime);
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-size: .75rem;
-  font-weight: bold;
-  margin-bottom: 18px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-h1 {
-  font-size: clamp(2.8rem, 8vw, 6rem);
-  line-height: 1.02;
-  font-weight: 900;
-  letter-spacing: -3px;
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  line-height: 1.12;
+  margin-bottom: 22px;
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, var(--teal), var(--pink), var(--purple), var(--lime));
+  background: linear-gradient(
+    90deg,
+    var(--teal),
+    var(--purple),
+    var(--pink)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -112,170 +128,55 @@ h1 {
 
 .hero p {
   max-width: 650px;
-  margin: 25px auto 30px;
+  margin: 0 auto 32px;
   color: var(--muted);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
-.button {
+.btn {
   display: inline-block;
-  padding: 14px 25px;
+  padding: 13px 25px;
   border-radius: 50px;
-  background: linear-gradient(100deg, var(--teal), var(--purple), var(--pink));
-  color: #090716;
-  font-weight: 900;
-  box-shadow: 0 0 25px #00f5dc35;
-  transition: transform .2s, box-shadow .2s;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: 0.25s ease;
 }
 
-.button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 35px #ff36b880;
+.btn-primary {
+  background: var(--teal);
+  color: #071014;
+  box-shadow: 0 0 22px #00f5d455;
 }
 
-section {
-  padding: 65px 0;
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px #00f5d499;
 }
 
-.section-heading {
-  text-align: center;
-  margin-bottom: 38px;
-}
-
-.section-heading h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 10px;
-}
-
-.section-heading p {
-  color: var(--muted);
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.project-card {
-  background: linear-gradient(145deg, #1b1530, #100d20);
-  border: 1px solid #ffffff20;
-  border-radius: 22px;
-  padding: 28px;
-  transition: transform .25s, border-color .25s;
-  position: relative;
-  overflow: hidden;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--teal);
-}
-
-.project-card:nth-child(2):hover {
-  border-color: var(--pink);
-}
-
-.project-card:nth-child(3):hover {
-  border-color: var(--purple);
-}
-
-.project-card:nth-child(4):hover {
-  border-color: var(--lime);
-}
-
-.project-number {
-  color: var(--teal);
-  font-size: .75rem;
-  letter-spacing: 3px;
-  font-weight: bold;
-}
-
-.project-card h3 {
-  font-size: 1.55rem;
-  margin: 12px 0;
-}
-
-.project-card p {
-  color: var(--muted);
-  margin-bottom: 22px;
-}
-
-.project-link {
-  color: var(--teal);
-  font-weight: bold;
-}
-
-.project-card:nth-child(2) .project-link {
+.btn-outline {
+  border: 1px solid var(--pink);
   color: var(--pink);
+  margin-left: 10px;
 }
 
-.project-card:nth-child(3) .project-link {
-  color: #c084fc;
-}
-
-.project-card:nth-child(4) .project-link {
-  color: var(--lime);
-}
-
-.about-panel {
-  background: linear-gradient(120deg, #102d35, #24112e, #25132e);
-  border: 1px solid #ffffff20;
-  border-radius: 25px;
-  padding: 45px;
-  text-align: center;
-}
-
-.about-panel p {
-  color: var(--muted);
-  max-width: 720px;
-  margin: 15px auto 0;
-}
-
-.contact {
-  text-align: center;
-}
-
-footer {
-  border-top: 1px solid #ffffff18;
-  padding: 30px 15px;
-  text-align: center;
-  color: var(--muted);
-  font-size: .85rem;
-}
-
-@media (max-width: 650px) {
-  .nav-links {
-    gap: 12px;
-    font-size: .8rem;
-  }
-
-  .hero {
-    padding: 75px 10px 60px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-panel {
-    padding: 30px 22px;
-  }
+.btn-outline:hover {
+  background: var(--pink);
+  color: white;
 }
 </style>
 </head>
-
 <body>
 
 <header>
   <div class="container">
     <nav>
-      <a href="#" class="logo">TIFFANY BROOKE</a>
+      <a href="#" class="logo">TB.</a>
+
       <div class="nav-links">
-        <a href="#projects">Projects</a>
         <a href="#about">About</a>
-        <a href="#contact">Connect</a>
-        <a href="https://tiffanybrooke13.gumroad.com/" target="_blank">Shop</a>
+        <a href="#projects">Projects</a>
+        <a href="#shop">Shop</a>
+        <a href="#connect">Connect</a>
       </div>
     </nav>
   </div>
@@ -284,143 +185,332 @@ footer {
 <main>
 
 <section class="hero">
-  <div class="eyebrow">Creative mind • Digital creator</div>
+  <div class="eyebrow">Creative mind · Digital creator · Lake life</div>
 
   <h1>
-    Ideas made<br>
-    <span class="gradient-text">impossible to ignore.</span>
+    Welcome to<br>
+    <span class="gradient-text">My Little Universe.</span>
   </h1>
 
   <p>
-    Welcome to my creative corner of the internet.
-    Explore digital projects, lake-life resources, crystal
-    discoveries, and the things I create along the way.
+    A little creativity, a little chaos, and a whole lot of big ideas.
+    Explore my projects, digital creations, and everything in between.
   </p>
 
-  <a class="button" href="#projects">EXPLORE MY PROJECTS</a>
+  <a href="#projects" class="btn btn-primary">Explore My World</a>
+  <a href="#about" class="btn btn-outline">Get to Know Me</a>
 </section>
 
-<section id="projects">
-  <div class="container">
+<section id="about" class="container">
+  <div class="about-content">
+    <div class="eyebrow">A little about me</div>
+    <h2>Hey, I'm <span class="gradient-text">Tiffany Brooke.</span></h2>
 
-    <div class="section-heading">
-      <div class="eyebrow">Made with imagination</div>
-      <h2>Featured <span class="gradient-text">Projects</span></h2>
-      <p>A little creativity, a little curiosity, and a lot of personality.</p>
-    </div>
-
-    <div class="project-grid">
-
-      <article class="project-card">
-        <div class="project-number">01 / LAKE LIFE</div>
-        <h3>Greers Ferry Lake Map</h3>
-        <p>
-          Explore the places, coves, landmarks, and hidden
-          corners that make Greers Ferry Lake special.
-        </p>
-        <a class="project-link
-           href=<a href=<a href=https://tiffanybrooke13.gumroad.com/l/httpswwwgflakemapsite
-  Explore the Map
-</a>
-           target="_blank" rel="noopener">
-          EXPLORE THE MAP →
-        </a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-number">02 / DIGITAL GUIDE</div>
-        <h3>The Ultimate Guide Book</h3>
-        <p>
-          Discover a practical digital resource designed
-          to make information easier to explore and use.
-        </p>
-        <a class="project-link"
-           href="https://ultimate-guide-book.vercel.app"
-           target="_blank" rel="noopener">
-          OPEN THE GUIDE →
-        </a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-number">03 / CRYSTAL WORLD</div>
-        <h3>Crystopedia</h3>
-        <p>
-          A growing world of crystal knowledge, discovery,
-          and inspiration for curious collectors.
-        </p>
-        <a class="project-link"
-           href="https://crystopedia.com"
-           target="_blank" rel="noopener">
-          EXPLORE CRYSTOPEDIA →
-        </a>
-      </article>
-
-      <article class="project-card">
-        <div class="project-number">04 / CONNECT</div>
-        <h3>Find Me Around the Web</h3>
-        <p>
-          One place to discover my creative work,
-          social profiles, and other projects.
-        </p>
-        <a class="project-link"
-           href="https://linktr.ee/tiffanybrooke2015"
-           target="_blank" rel="noopener">
-          CONNECT WITH ME →
-        </a>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section id="about">
-  <div class="container">
-    <div class="about-panel">
-      <div class="eyebrow">A little about me</div>
-      <h2>Curiosity fuels <span class="gradient-text">creativity.</span></h2>
-      <p>
-        I'm Tiffany Brooke — a creative mind with a love
-        for exploring ideas, building useful resources,
-        discovering new things, and turning inspiration
-        into something real.
-        From lake-life projects to digital creations,
-        there's always something new in the works.
-      </p>
-    </div>
-  </div>
-</section>
-</main>
-
-<section id="contact">
-  <div class="container contact">
-    <div class="eyebrow">Let's make something happen</div>
-    <h2>Explore. Discover. <span class="gradient-text">Create.</span></h2>
-    <p style="color: var(--muted); margin: 15px auto 25px;">
-      Interested in my digital creations? Visit my storefront
-      and see what's available.
+    <p>
+      I'm a creative thinker with a love for turning ideas into things
+      people can actually use, explore, and enjoy. From digital projects
+      and lake-life adventures to crystals and creative experiments,
+      there's always something new happening around here.
     </p>
+  </div>
+</section>
+<style>
+section {
+  padding: 65px 0;
+}
 
-    <a class="button"
-       href="https://tiffanybrooke13.gumroad.com/"
+.about-content {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+  padding: 45px 30px;
+  background: var(--card);
+  border: 1px solid #00f5d433;
+  border-radius: 24px;
+  box-shadow: 0 0 30px #00f5d40d;
+}
+
+.about-content h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  color: var(--muted);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.7rem);
+}
+
+.section-heading p {
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: var(--card);
+  border: 1px solid #ffffff18;
+  border-radius: 20px;
+  padding: 28px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--teal);
+  box-shadow: 0 0 25px #00f5d422;
+}
+
+.project-icon {
+  font-size: 2.3rem;
+  margin-bottom: 18px;
+}
+
+.project-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.project-card:nth-child(2) .project-link {
+  color: var(--pink);
+}
+
+.project-card:nth-child(3) .project-link {
+  color: var(--lime);
+}
+
+.shop-highlight {
+  background: linear-gradient(135deg, #00f5d414, #a855f722, #ff36b714);
+  border: 1px solid #a855f755;
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.shop-highlight h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.shop-highlight p {
+  color: var(--muted);
+  margin-bottom: 22px;
+}
+
+.price {
+  color: var(--lime);
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+</style>
+
+<section id="projects" class="container">
+  <div class="section-heading">
+    <div class="eyebrow">Made with curiosity</div>
+    <h2>Explore My <span class="gradient-text">Projects</span></h2>
+    <p>A collection of ideas, creations, and things I've brought to life.</p>
+  </div>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <div class="project-icon">🌊</div>
+      <h3>Greers Ferry Lake Map</h3>
+      <p>Explore the lake, discover favorite spots, and find your next adventure.</p>
+      <a class="project-link"
+         href="https://tiffanybrooke13.gumroad.com/l/httpswwwgflakemapsite"
+         target="_blank" rel="noopener">
+        EXPLORE THE MAP →
+      </a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">💎</div>
+      <h3>Crystopedia</h3>
+      <p>A growing world of crystal information, discovery, and inspiration.</p>
+      <a class="project-link"
+         href="https://crystopedia.com"
+         target="_blank" rel="noopener">
+        DISCOVER CRYSTOPEDIA →
+      </a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">📚</div>
+      <h3>Ultimate Guide</h3>
+      <p>Explore my digital guide and discover something new.</p>
+      <a class="project-link"
+         href="https://ultimate-guide-book.vercel.app"
+         target="_blank" rel="noopener">
+        OPEN THE GUIDE →
+      </a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🔗</div>
+      <h3>Find Me Everywhere</h3>
+      <p>All my links, projects, and online corners in one convenient place.</p>
+      <a class="project-link"
+         href="https://linktr.ee/tiffanybrooke2015"
+         target="_blank" rel="noopener">
+        CONNECT WITH ME →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="shop" class="container">
+  <div class="section-heading">
+    <div class="eyebrow">Support independent creativity</div>
+    <h2>Visit My <span class="gradient-text">Digital Shop</span></h2>
+  </div>
+
+  <div class="shop-highlight">
+    <div class="project-icon">🛍️</div>
+    <h3>Greers Ferry Lake Map</h3>
+    <p>Get access to my interactive Greers Ferry Lake map.</p>
+    <div class="price">$14.99</div>
+    <a class="btn btn-primary"
+       href="https://tiffanybrooke13.gumroad.com/l/httpswwwgflakemapsite"
        target="_blank" rel="noopener">
-      VISIT MY GUMROAD SHOP
+      SHOP NOW
     </a>
   </div>
 </section>
+<style>
+#connect {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#connect h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  margin-bottom: 15px;
+}
+
+#connect p {
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.social-links a {
+  padding: 12px 22px;
+  border: 1px solid #ff36b766;
+  border-radius: 50px;
+  color: var(--pink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  transition: 0.25s;
+}
+
+.social-links a:hover {
+  background: var(--pink);
+  color: white;
+  box-shadow: 0 0 20px #ff36b755;
+}
+
+footer {
+  border-top: 1px solid #ffffff18;
+  padding: 30px 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+footer span {
+  color: var(--teal);
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 12px;
+    font-size: 0.7rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 75px 15px;
+  }
+
+  .btn-outline {
+    margin: 12px 0 0;
+  }
+
+  .about-content {
+    padding: 30px 22px;
+  }
+}
+</style>
+
+<section id="connect" class="container">
+  <div class="eyebrow">Let's stay connected</div>
+
+  <h2>Find Me in the <span class="gradient-text">Digital Universe.</span></h2>
+
+  <p>
+    Follow along, explore my creations, and see what I'm working on next.
+  </p>
+
+  <div class="social-links">
+    <a href="https://linktr.ee/tiffanybrooke2015"
+       target="_blank" rel="noopener">LINKTREE</a>
+
+    <a href="https://tiffanybrooke13.gumroad.com/"
+       target="_blank" rel="noopener">GUMROAD SHOP</a>
+
+    <a href="https://www.gflakemap.site"
+       target="_blank" rel="noopener">GREERS FERRY LAKE</a>
+  </div>
+</section>
+
+</main>
 
 <footer>
-  <p>© 2026 Tiffany Brooke. All rights reserved.</p>
-  <p style="margin-top: 7px;">
-    Created with imagination, curiosity & a little neon.
-  </p>
+  <p>Created with creativity, curiosity & a little chaos.</p>
+  <p>© 2026 <span>Tiffany Brooke</span> · All rights reserved.</p>
 </footer>
 
 </body>
 </html>
-
-
-
-
-
-
-  
