@@ -183,17 +183,15 @@ nav {
 </header>
 
 <main>
-
-<div class="author-profile">
-  <img
-    .author-headshot {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 35%;
-  border-radius: 50%;
-  display: block;
-}
+  <div class="author-profile">
+  <div class="author-photo-placeholder">
+    <img
+      src="images/B5285DC2-921D-45BE-8604-A93DBC087CB3.png"
+      alt="Tiffany Brooke"
+      class="author-headshot"
+    >
+  </div>
+</div>
   >
 </div>
     <span class="author-monogram">TB</span>
@@ -243,6 +241,21 @@ nav {
     </p>
   </div>
 </section>
+.author-photo-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.author-headshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+}
 <style>
 section {
   padding: 65px 0;
