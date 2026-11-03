@@ -187,10 +187,13 @@ nav {
 <section class="hero">
   <div class="eyebrow">Creative mind · Digital creator · Lake life</div>
 
-  <h1>
-    Welcome to<br>
-    <span class="gradient-text">My Little Universe.</span>
-  </h1>
+  <h1 class="sparkle-heading">
+  Welcome to<br>
+  <span class="gradient-text">
+    My Little Universe.
+    <span class="sparkle">✦</span>
+  </span>
+</h1>
 
   <p>
     A little creativity, a little chaos, and a whole lot of big ideas.
@@ -509,6 +512,176 @@ footer span {
   <p>Created with creativity, curiosity & a little chaos.</p>
   <p>© 2026 <span>Tiffany Brooke</span> · All rights reserved.</p>
 </footer>
+<style>
 
+/* CUSTOM TB MONOGRAM */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border: 2px solid var(--teal);
+  border-radius: 15px;
+  background: linear-gradient(135deg, #00f5d422, #a855f733, #ff36b722);
+  color: var(--teal);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: -2px;
+  box-shadow:
+    0 0 12px #00f5d466,
+    inset 0 0 12px #00f5d422;
+  animation: monogramGlow 4s ease-in-out infinite alternate;
+}
+
+/* FLOATING NEON PARTICLES */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.45;
+  background-image:
+    radial-gradient(circle, #00f5d4 1px, transparent 2px),
+    radial-gradient(circle, #ff36b7 1px, transparent 2px),
+    radial-gradient(circle, #a855f7 1px, transparent 2px),
+    radial-gradient(circle, #c6ff00 1px, transparent 2px);
+  background-size: 130px 150px, 190px 180px, 220px 210px, 280px 240px;
+  background-position: 0 0, 40px 70px, 100px 30px, 60px 120px;
+  animation: particleDrift 35s linear infinite;
+}
+
+/* HEADLINE GLOW */
+.hero h1 {
+  animation: headlineGlow 4s ease-in-out infinite alternate;
+}
+
+.gradient-text {
+  filter: drop-shadow(0 0 12px #00f5d455);
+}
+
+/* PROJECT CARD GLOW */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-9px) scale(1.02);
+  box-shadow:
+    0 0 15px #00f5d455,
+    0 0 35px #a855f733;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--teal), transparent);
+  transition: left 0.6s ease;
+}
+
+.project-card:hover::before {
+  left: 130%;
+}
+
+/* BUTTON GLOW */
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+/* ANIMATIONS */
+@keyframes monogramGlow {
+  from {
+    box-shadow: 0 0 10px #00f5d466, inset 0 0 8px #00f5d422;
+  }
+  to {
+    box-shadow: 0 0 25px #ff36b788, inset 0 0 15px #a855f744;
+  }
+}
+
+@keyframes headlineGlow {
+  from {
+    text-shadow: 0 0 5px #00f5d422;
+  }
+  to {
+    text-shadow: 0 0 18px #a855f755;
+  }
+}
+
+@keyframes particleDrift {
+  from {
+    background-position: 0 0, 40px 70px, 100px 30px, 60px 120px;
+  }
+  to {
+    background-position: 0 1000px, 40px 1070px, 100px 1030px, 60px 1120px;
+  }
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.sparkle-heading {
+  position: relative;
+}
+
+.sparkle {
+  display: inline-block;
+  color: var(--lime);
+  font-size: 0.45em;
+  vertical-align: top;
+  margin-left: 5px;
+  filter: drop-shadow(0 0 8px var(--lime));
+  animation: sparklePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes sparklePulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(45deg);
+  }
+}.sparkle-heading {
+  position: relative;
+}
+
+.sparkle {
+  display: inline-block;
+  color: var(--lime);
+  font-size: 0.45em;
+  vertical-align: top;
+  margin-left: 5px;
+  filter: drop-shadow(0 0 8px var(--lime));
+  animation: sparklePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes sparklePulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3) rotate(45deg);
+  }
+}
+</style>
 </body>
 </html>
