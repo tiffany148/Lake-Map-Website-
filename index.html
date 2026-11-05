@@ -4,372 +4,392 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore the creative world of Tiffany Brooke — lake life, digital projects, crystals, nature, and original music.">
-<meta name="theme-color" content="#071018">
+
 <title>Tiffany Brooke | Creative Portfolio</title>
+
+<meta name="description" content="Explore the creative world of Tiffany Brooke — lake life, digital projects, crystals, nature, and original music.">
 
 <style>
 :root {
-  --bg:#071018;
-  --panel:#101c29;
-  --teal:#20f5df;
-  --pink:#ff4fc8;
-  --purple:#a879ff;
-  --lime:#c8ff45;
-  --muted:#b8c5d2;
+  --teal: #087f83;
+  --deep-teal: #075b61;
+  --light-teal: #71e4dc;
+  --pink: #ff55b9;
+  --purple: #a77bff;
+  --lime: #c9ff55;
+  --cream: #fff8e9;
+  --text: #f5fffc;
+  --muted: #d1eeea;
+  --card: rgba(3, 66, 70, .55);
 }
 
-* { box-sizing:border-box; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-html { scroll-behavior:smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  margin:0;
-  background:
-    radial-gradient(ellipse at 10% 0%,rgba(32,245,223,.13),transparent 35%),
-    radial-gradient(ellipse at 90% 12%,rgba(168,121,255,.14),transparent 30%),
-    var(--bg);
-  color:#f5f8fb;
-  font-family:Arial,Helvetica,sans-serif;
-  line-height:1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--teal);
+  color: var(--text);
+  line-height: 1.6;
 }
 
-a { color:inherit;text-decoration:none; }
-
-.wrap { width:min(1120px,92%);margin:auto; }
-
-.eyebrow {
-  color:var(--teal);
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  font-size:.76rem;
-  font-weight:800;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.btn {
-  display:inline-block;
-  padding:12px 19px;
-  border-radius:999px;
-  font-weight:800;
-  background:var(--teal);
-  color:#061216;
-  box-shadow:0 0 22px rgba(32,245,223,.22);
-  transition:.2s;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.btn:hover { transform:translateY(-3px); }
-
-.btn.alt {
-  background:transparent;
-  color:var(--pink);
-  border:1px solid var(--pink);
-  box-shadow:none;
+.wrap {
+  width: min(1120px, 92%);
+  margin: auto;
 }
 
 header {
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:rgba(7,16,24,.9);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.07);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(5, 91, 97, .96);
+  border-bottom: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(12px);
 }
 
 nav {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  padding:15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+  flex-wrap: wrap;
 }
 
-.brand { font-weight:950;letter-spacing:.04em; }
-.brand span { color:var(--teal); }
-
-nav .links {
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  color:var(--muted);
-  font-size:.9rem;
+.brand img {
+  height: 76px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
 }
 
-nav .links a:hover { color:var(--teal); }
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.links a:hover {
+  color: var(--lime);
+}
+
+section {
+  padding: 75px 0;
+  scroll-margin-top: 100px;
+}
 
 .hero {
-  padding:76px 0 64px;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:45px;
-  align-items:center;
-  min-height:590px;
+  padding: 75px 0 85px;
+  background: linear-gradient(135deg, #087f83, #09656e, #147e83);
 }
 
-.hero h1 {
-  font-size:clamp(3rem,7vw,6rem);
-  line-height:.98;
-  letter-spacing:-.065em;
-  margin:15px 0 22px;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 45px;
+  align-items: center;
 }
 
-.hero h1 em {
-  font-style:normal;
-  color:var(--teal);
-  text-shadow:0 0 28px rgba(32,245,223,.3);
+.eyebrow {
+  color: var(--lime);
+  font-size: .85rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  margin: 14px 0;
+}
+
+h1 span {
+  color: var(--pink);
 }
 
 .hero p {
-  max-width:620px;
-  color:var(--muted);
-  font-size:1.08rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  color: var(--muted);
 }
 
-.hero-actions {
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:28px;
+.hero-photo {
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  border: 5px solid var(--light-teal);
+  border-radius: 28px;
+  box-shadow: 12px 12px 0 var(--purple);
 }
 
-.portrait-shell {
-  position:relative;
-  padding:12px;
-  border-radius:28px;
-  background:linear-gradient(135deg,var(--teal),var(--purple),var(--pink));
-  box-shadow:0 0 55px rgba(32,245,223,.12);
-  transform:rotate(2deg);
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 25px;
 }
 
-.portrait-shell img {
-  display:block;
-  width:100%;
-  aspect-ratio:4/5;
-  object-fit:cover;
-  border-radius:19px;
+.btn {
+  display: inline-block;
+  padding: 12px 21px;
+  border-radius: 30px;
+  font-weight: 900;
+  background: var(--pink);
+  color: #fff;
 }
 
-.portrait-note {
-  position:absolute;
-  bottom:26px;
-  left:-28px;
-  background:var(--lime);
-  color:#10170a;
-  padding:11px 16px;
-  border-radius:12px;
-  font-weight:900;
-  transform:rotate(-5deg);
+.btn.secondary {
+  background: var(--lime);
+  color: #17494a;
 }
 
-section { padding:72px 0; }
-
-.section-head { margin-bottom:28px; }
-
-.section-head h2 {
-  font-size:clamp(2rem,4vw,3.2rem);
-  line-height:1.05;
-  margin:8px 0;
+.btn.purple {
+  background: var(--purple);
+  color: white;
 }
 
-.section-head p {
-  color:var(--muted);
-  max-width:700px;
+.section-heading {
+  margin-bottom: 30px;
 }
 
-.about-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
+.section-heading h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
 }
 
-.glass,.project,.album {
-  background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.025));
-  border:1px solid rgba(32,245,223,.22);
-  border-radius:22px;
-  padding:25px;
+.section-heading p {
+  color: var(--muted);
+  margin-top: 10px;
 }
 
-.glass p { color:var(--muted); }
-
-.accent { color:var(--pink);font-weight:800; }
-
-.projects {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
+.accent {
+  color: var(--lime);
 }
 
-.project {
-  padding:0;
-  overflow:hidden;
-  transition:.22s;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
 }
 
-.project:hover,.album:hover {
-  transform:translateY(-5px);
-  border-color:var(--teal);
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,.12);
 }
 
-.project img {
-  width:100%;
-  height:190px;
-  object-fit:cover;
-  display:block;
-  background:#182635;
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
 }
 
-.project-body { padding:18px; }
-
-.project h3 { margin:0 0 6px; }
-
-.project p {
-  margin:0 0 13px;
-  color:var(--muted);
-  font-size:.92rem;
+.card-content {
+  padding: 22px;
 }
 
-.project a.more {
-  color:var(--teal);
-  font-weight:800;
-  font-size:.88rem;
+.card h3 {
+  color: var(--light-teal);
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.card p {
+  color: var(--muted);
+  margin-bottom: 15px;
+}
+
+.card-link {
+  color: var(--lime);
+  font-weight: bold;
+}
+
+.about {
+  background: #096d72;
+}
+
+.about-content {
+  max-width: 850px;
+}
+
+.about-content p {
+  font-size: 1.08rem;
+  color: var(--muted);
+  margin-top: 15px;
 }
 
 .lake-feature {
-  min-height:330px;
-  border-radius:28px;
-  overflow:hidden;
-  position:relative;
-  display:flex;
-  align-items:end;
-  padding:32px;
-  background:
-    linear-gradient(0deg,rgba(3,11,16,.92),rgba(3,11,16,.05)),
-    url('images/att.0zcNSBJRekJSqGD8KKh9UtbLcvmsOAIAXwiLZRPS284.jpeg') center/cover;
-  border:1px solid rgba(32,245,223,.22);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
 }
 
-.lake-feature h3 { font-size:2.2rem;margin:6px 0; }
-.lake-feature p { max-width:600px;color:#e2edf4; }
+.lake-feature img {
+  border-radius: 22px;
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
 
-.albums {
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
+.lake-feature p {
+  color: var(--muted);
+  margin: 15px 0;
+}
+
+.music {
+  background: #075e65;
 }
 
 .album {
-  padding:18px;
-  display:grid;
-  grid-template-columns:145px 1fr;
-  gap:18px;
-  align-items:start;
-  transition:.2s;
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 22px;
+  padding: 22px;
+  margin-bottom: 22px;
+  background: var(--card);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.18);
 }
 
 .album-cover {
-  width:145px;
-  height:145px;
-  object-fit:cover;
-  border-radius:15px;
-  background:#172432;
+  width: 170px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.album h3 { margin:0 0 4px;font-size:1.2rem; }
+.album h3 {
+  font-size: 1.5rem;
+  color: var(--pink);
+}
 
 .artist {
-  color:var(--teal);
-  font-size:.85rem;
-  font-weight:800;
-  margin-bottom:10px;
+  color: var(--light-teal);
+  margin-bottom: 15px;
 }
 
 .track {
-  padding:10px 0;
-  border-top:1px solid rgba(255,255,255,.09);
+  margin-top: 13px;
 }
 
 .track-name {
-  font-size:.91rem;
-  font-weight:700;
-  margin-bottom:6px;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-.track audio { width:100%;height:34px; }
+audio {
+  width: 100%;
+  max-width: 450px;
+  height: 38px;
+}
 
 .shop {
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:25px;
-  align-items:center;
-  background:linear-gradient(120deg,rgba(32,245,223,.12),rgba(168,121,255,.12));
-  border:1px solid rgba(168,121,255,.35);
-  padding:30px;
-  border-radius:25px;
+  background: #08777c;
 }
 
-.shop h3 { font-size:1.8rem;margin:4px 0; }
-.shop p { color:var(--muted);margin:0; }
-
-.price {
-  font-size:1.4rem;
-  color:var(--lime);
-  font-weight:900;
-  margin-bottom:12px;
-  text-align:right;
+.shop-panel {
+  padding: 35px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #075b61, #087f83);
+  border: 2px solid var(--pink);
+  text-align: center;
 }
 
-.connect { display:flex;gap:14px;flex-wrap:wrap; }
-
-.connect a {
-  padding:15px 22px;
-  border:1px solid var(--pink);
-  color:var(--pink);
-  border-radius:999px;
-  font-weight:900;
-  letter-spacing:.06em;
+.shop-panel h2 {
+  font-size: 2.5rem;
 }
 
-.connect a:hover {
-  background:var(--pink);
-  color:#180817;
+.shop-panel p {
+  color: var(--muted);
+  margin: 12px auto 20px;
+  max-width: 650px;
+}
+
+.connect {
+  text-align: center;
+}
+
+.connect p {
+  color: var(--muted);
+  margin: 12px 0 20px;
 }
 
 footer {
-  padding:28px 0 45px;
-  border-top:1px solid rgba(255,255,255,.08);
-  color:var(--muted);
-  font-size:.88rem;
+  background: #075b61;
+  padding: 28px 0;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,.15);
 }
 
-.footer-row {
-  justify-content:space-between;
-  gap:16px;
-  flex-wrap:wrap;
+footer span {
+  color: var(--pink);
 }
 
-@media(max-width:850px) {
-  .hero { grid-template-columns:1fr;min-height:auto;padding-top:55px; }
-  .portrait-shell { max-width:410px;margin:8px auto; }
-  .projects { grid-template-columns:repeat(2,1fr); }
-  .albums { grid-template-columns:1fr; }
-}
-
-@media(max-width:560px) {
-  nav { align-items:flex-start;flex-direction:column; }
-  .hero h1 { font-size:3.5rem; }
-  .projects { grid-template-columns:1fr 1fr;gap:10px; }
-  .project img { height:135px; }
-  .project-body { padding:13px; }
-  .project h3 { font-size:1rem; }
-  .project p { font-size:.82rem; }
-  .album {
-    grid-template-columns:95px 1fr;
-    padding:13px;
-    gap:13px;
+@media (max-width: 750px) {
+  .hero-grid,
+  .lake-feature {
+    grid-template-columns: 1fr;
   }
-  .album-cover { width:95px;height:95px; }
-  .shop { grid-template-columns:1fr; }
-  .price { text-align:left; }
-  .lake-feature { min-height:280px;padding:22px; }
+
+  .hero-photo {
+    max-width: 300px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .links {
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .album {
+    grid-template-columns: 1fr;
+  }
+
+  .album-cover {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  section {
+    padding: 55px 0;
+  }
 }
 </style>
 </head>
@@ -377,291 +397,304 @@ footer {
 <body>
 
 <header>
-<div class="wrap">
-<nav>
-<a class="brand" href="#top">
-  <img src="images/Untitled%20design.png"
-       alt="Tiffany Brooke logo"
-       style="height:70px;width:auto;object-fit:contain;">
-</a>
-<div class="links">
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#music">Music</a>
-<a href="#shop">Shop</a>
-<a href="#connect">Connect</a>
-</div>
-</nav>
-</div>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#top">
+        <img src="images/Untitled%20design.png" alt="Tiffany Brooke logo">
+      </a>
+
+      <div class="links">
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#lake">LAKE LIFE</a>
+        <a href="#music">MUSIC</a>
+        <a href="#shop">SHOP</a>
+        <a href="#connect">CONNECT</a>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <main id="top">
 
-<div class="wrap hero">
-<div>
-<div class="eyebrow">Creative mind • Lake heart • Always making something</div>
-<h1>Hey, I'm<br><em>Tiffany Brooke.</em></h1>
-<p>A little lake life, a little music, a little crystal-fueled creativity — and a whole lot of projects that refuse to stay inside my notebook.</p>
-<div class="hero-actions">
-<a class="btn" href="#projects">Explore my projects</a>
-<a class="btn alt" href="#music">Listen to my music</a>
-</div>
-</div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Creativity • Lake Life • Music • Everything In Between</div>
+      <h1>Hi, I'm <span>Tiffany Brooke.</span></h1>
+      <p>
+        Welcome to my little corner of the internet.
+        A collection of creative projects, original music,
+        lake adventures, crystals, and a little bit of chaos.
+      </p>
 
-<div class="portrait-shell">
-<img src="images/B5285DC2-921D-45BE-8604-A93DBC087CB3.png" alt="Tiffany Brooke portrait">
-<div class="portrait-note">Creativity lives here ✦</div>
-</div>
-</div>
+      <div class="buttons">
+        <a class="btn" href="#projects">Explore My Projects</a>
+        <a class="btn secondary" href="#music">Listen to My Music</a>
+      </div>
+    </div>
 
-<section id="about">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">A little about me</div>
-<h2>Making things with<br><span style="color:var(--pink)">meaning, color & character.</span></h2>
-</div>
+    <div>
+      <img class="hero-photo"
+        src="images/B5285DC2-921D-45BE-8604-A93DBC087CB3.png"
+        alt="Tiffany Brooke">
+    </div>
+  </div>
+</section>
 
-<div class="about-grid">
-<div class="glass">
-<h3>More than one creative lane</h3>
-<p>I'm a songwriter, maker, lake-life enthusiast, and curious collector of ideas. I love turning the things I care about — family, nature, music, crystals, and everyday chaos — into things other people can enjoy, use, or remember.</p>
-</div>
+<section class="about" id="about">
+  <div class="wrap about-content">
+    <div class="section-heading">
+      <div class="eyebrow">A little about me</div>
+      <h2>One person. <span class="accent">A million ideas.</span></h2>
+    </div>
 
-<div class="glass">
-<h3>Life is better at the lake</h3>
-<p>Greers Ferry Lake is home base and a constant source of inspiration. Around here, the best ideas tend to show up somewhere between a boat ride, a sunset, and one more project I swear I'll finish tonight. <span class="accent">Finished is better than flawless.</span></p>
-</div>
-</div>
-</div>
+    <p>
+      I'm a creative soul who loves turning ideas into things:
+      songs, websites, digital projects, and all sorts of
+      wonderfully random creations.
+    </p>
+
+    <p>
+      When I'm not creating something, you'll probably find me
+      enjoying Greers Ferry Lake, exploring nature, crocheting,
+      or admiring a pretty crystal.
+    </p>
+  </div>
 </section>
 
 <section id="projects">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Things I've created</div>
-<h2>Projects & little worlds</h2>
-<p>Digital guides, creative resources, and a few rabbit holes worth exploring.</p>
-</div>
+  <div class="wrap">
+    <div class="section-heading">
+      <div class="eyebrow">Things I've been creating</div>
+      <h2>Projects & <span class="accent">little worlds</span></h2>
+      <p>A few of the ideas I've brought to life.</p>
+    </div>
 
-<div class="projects">
+    <div class="grid">
 
-<article class="project">
-<img src="images/IMG_5825.jpeg" alt="Greers Ferry Lake map preview">
-<div class="project-body">
-<h3>Explore the Map</h3>
-<p>Find your way around the lake and discover favorite spots.</p>
-<a class="more" href="https://www.gflakemap.site" target="_blank">Visit the lake map ↗</a>
-</div>
-</article>
+      <article class="card">
+        <img src="images/IMG_5825.jpeg" alt="Greers Ferry Lake Map">
+        <div class="card-content">
+          <h3>Greers Ferry Lake Map</h3>
+          <p>Explore favorite lake locations, coves, landmarks, and local lake life.</p>
+          <a class="card-link" href="https://www.gflakemap.site" target="_blank">Explore the Map →</a>
+        </div>
+      </article>
 
-<article class="project">
-<img src="images/IMG_5779.png" alt="Crystopedia cover">
-<div class="project-body">
-<h3>Crystopedia</h3>
-<p>A growing guide to crystals, their stories, and their details.</p>
-<a class="more" href="https://crystopedia.com" target="_blank">Explore Crystopedia ↗</a>
-</div>
-</article>
+      <article class="card">
+        <img src="images/IMG_6163.jpeg" alt="The Ultimate Guide">
+        <div class="card-content">
+          <h3>The Ultimate Guide</h3>
+          <p>A digital guide created to make exploring and discovering easier.</p>
+          <a class="card-link" href="https://ultimate-guide-book.vercel.app" target="_blank">Explore the Guide →</a>
+        </div>
+      </article>
 
-<article class="project">
-<img src="images/IMG_6163.jpeg" alt="Ultimate Guide book cover">
-<div class="project-body">
-<h3>The Ultimate Guide</h3>
-<p>A practical resource made to help make the complicated simpler.</p>
-<a class="more" href="https://ultimate-guide-book.vercel.app" target="_blank">Open the guide ↗</a>
-</div>
-</article>
+      <article class="card">
+        <img src="images/IMG_5779.png" alt="Crystopedia">
+        <div class="card-content">
+          <h3>Crystopedia</h3>
+          <p>A growing world of crystals, information, and gemstone discoveries.</p>
+          <a class="card-link" href="https://crystopedia.com" target="_blank">Visit Crystopedia →</a>
+        </div>
+      </article>
 
-<article class="project">
-<img src="images/IMG_6661.jpeg" alt="Crystals, Crochet, and Chaos artwork">
-<div class="project-body">
-<h3>Crystals, Crochet & Chaos</h3>
-<p>Creative energy, handmade things, and a soundtrack for the process.</p>
-<a class="more" href="#music">Listen below ↗</a>
-</div>
-</article>
-
-</div>
-
-<div class="lake-feature" style="margin-top:20px">
-<div>
-<div class="eyebrow">My favorite kind of backdrop</div>
-<h3>Greers Ferry Lake</h3>
-<p>Clear water, familiar coves, Sugarloaf views, and the kind of sunsets that make you stop whatever you're doing.</p>
-<a class="btn" href="https://www.gflakemap.site" target="_blank">Life is better at the lake</a>
-</div>
-</div>
-
-</div>
-</section>
-
-<section id="music">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Written from real life, with a little imagination</div>
-<h2>Original music</h2>
-<p>Press play and stay awhile. These are songs from four different corners of my world.</p>
-</div>
-
-<div class="albums">
-
-<article class="album">
-<img class="album-cover" src="images/IMG_6166.png" alt="This Is My Home album cover">
-<div>
-<h3>This Is My Home</h3>
-<div class="artist">Tiffany Brooke</div>
-
-<div class="track">
-<div class="track-name">Home’s Right Here With Me</div>
-<audio controls preload="none">
-<source src="Home%E2%80%99s%20Right%20Here%20With%20Me.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<div class="track">
-<div class="track-name">Red, White and Blue Summer Nights</div>
-<audio controls preload="none">
-<source src="Red%2C%20White%20and%20Blue%20Summer%20Nights.mp3" type="audio/mpeg">
-</audio>
-</div>
-</div>
-</article>
-
-<article class="album">
-<img class="album-cover" src="images/IMG_6642.jpeg" alt="Sweet Sour or Spicy album cover">
-<div>
-<h3>Sweet, Sour…or Spicy?</h3>
-<div class="artist">Tiffany Brooke</div>
-
-<div class="track">
-<div class="track-name">Grown Sweet</div>
-<audio controls preload="none">
-<source src="5.%20Grown%20Sweet.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<div class="track">
-<div class="track-name">Grown Sour</div>
-<audio controls preload="none">
-<source src="6.%20Grown%20Sour.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<div class="track">
-<div class="track-name">Just Peachy</div>
-<audio controls preload="none">
-<source src="7.%20Just%20Peachy.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<div class="track">
-<div class="track-name">Til the Lake Runs Dry</div>
-<audio controls preload="none">
-<source src="1.%20%F0%9F%A9%B5%20TIL%20the%20Lake%20Runs%20Dry.mp3" type="audio/mpeg">
-</audio>
-</div>
-</div>
-</article>
-
-<article class="album">
-<img class="album-cover" src="images/IMG_6661.jpeg" alt="Crystals Crochet and Chaos album cover">
-<div>
-<h3>Crystals, Crochet, & Chaos</h3>
-<div class="artist">Tiffany Brooke</div>
-
-<div class="track">
-<div class="track-name">On Your Way</div>
-<audio controls preload="none">
-<source src="3..%20On%20Your%20Way.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<div class="track">
-<div class="track-name">Just One More Row</div>
-<audio controls preload="none">
-<source src="Just%20One%20More%20Row.mp3" type="audio/mpeg">
-</audio>
-</div>
-
-<div class="track">
-<div class="track-name">Finished Is Better Than Flawless</div>
-<audio controls preload="none">
-<source src="22.%20Finished%20Is%20Better%20Than%20Flawless.m4a" type="audio/mp4">
-</audio>
-</div>
-
-<div class="track">
-<div class="track-name">Crystals, Crochet, & Chaos</div>
-<audio controls preload="none">
-<source src="6.%20Crystals%2C%20Crochet%2C%20%26%20Chaos.mp3" type="audio/mpeg">
-</audio>
-</div>
-</div>
-</article>
-
-<article class="album">
-  <img class="album-cover" src="images/IMG_6161.jpeg" alt="Vitamin C album cover">
-  <div>
-    <h3>Vitamin C</h3>
-    <div class="artist">Tiffany Brooke</div>
-
-    <div class="track">
-      <div class="track-name">Be A Pirate</div>
-      <audio controls preload="none">
-        <source src="Be%20a%20pirate%20(USE).mp3" type="audio/mpeg">
-      </audio>
     </div>
   </div>
-</article>
-
-
-</div>
-</div>
 </section>
 
-<section id="shop">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Take a piece of the lake home</div>
-<h2>Shop my work</h2>
-</div>
+<section id="lake">
+  <div class="wrap">
+    <div class="lake-feature">
+      <img
+        src="images/att.0zcNSBJRekJSqGD8KKh9UtbLcvmsOAIAXwiLZRPS284.jpeg"
+        alt="Greers Ferry Lake scenery">
 
-<div class="shop">
-<div>
-<div class="eyebrow">Digital download</div>
-<h3>Greers Ferry Lake Map</h3>
-<p>Explore the lake with a handy digital map, made for lake days and curious adventurers.</p>
-</div>
-<div>
-<div class="price">$14.99 USD</div>
-<a class="btn" href="https://tiffanybrooke13.gumroad.com/l/httpswwwgflakemapsite" target="_blank">Shop on Gumroad ↗</a>
-</div>
-</div>
-</div>
+      <div>
+        <div class="eyebrow">Life is better at the lake</div>
+        <h2>My happy place is <span class="accent">Greers Ferry.</span></h2>
+        <p>
+          Beautiful water, boat rides, sunsets, quiet coves,
+          and all the little things that make lake life special.
+        </p>
+        <a class="btn secondary" href="https://www.gflakemap.site" target="_blank">Explore the Lake</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="connect">
-<div class="wrap">
-<div class="section-head">
-<div class="eyebrow">Find me around the internet</div>
-<h2>Let's connect</h2>
-<p>Follow along for new projects, music, lake-life updates, and whatever creative idea comes next.</p>
-</div>
+<section class="music" id="music">
+  <div class="wrap">
+    <div class="section-heading">
+      <div class="eyebrow">Original music</div>
+      <h2>Made of memories, <span class="accent">melodies & mayhem.</span></h2>
+      <p>Take a listen to some of my original music.</p>
+    </div>
 
-<div class="connect">
-<a href="https://linktr.ee/tiffanybrooke2015" target="_blank">LINKTREE ↗</a>
-<a href="https://tiffanybrooke13.gumroad.com/" target="_blank">GUMROAD SHOP ↗</a>
-</div>
-</div>
+    <article class="album">
+      <img class="album-cover" src="images/IMG_6166.png" alt="This Is My Home album cover">
+      <div>
+        <h3>This Is My Home</h3>
+        <div class="artist">Tiffany Brooke</div>
+
+        <div class="track">
+          <div class="track-name">Home's Right Here With Me</div>
+          <audio controls preload="none">
+            <source src="Home%E2%80%99s%20Right%20Here%20With%20Me.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Red, White and Blue Summer Nights</div>
+          <audio controls preload="none">
+            <source src="Red%2C%20White%20and%20Blue%20Summer%20Nights.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </article>
+
+    <article class="album">
+      <img class="album-cover" src="images/IMG_6642.jpeg" alt="Sweet Sour or Spicy album cover">
+      <div>
+        <h3>Sweet, Sour…or Spicy?</h3>
+        <div class="artist">Tiffany Brooke</div>
+
+        <div class="track">
+          <div class="track-name">Grown Sweet</div>
+          <audio controls preload="none">
+            <source src="6.%20Grown%20Sweet.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Grown Sour</div>
+          <audio controls preload="none">
+            <source src="6.%20Grown%20Sour.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Just Peachy</div>
+          <audio controls preload="none">
+            <source src="7.%20Just%20Peachy.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Til the Lake Runs Dry</div>
+          <audio controls preload="none">
+            <source src="1.%20%F0%9F%A9%B5%20TIL%20the%20Lake%20Runs%20Dry.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </article>
+
+    <article class="album">
+      <img class="album-cover" src="images/IMG_6661.jpeg" alt="Crystals Crochet and Chaos album cover">
+      <div>
+        <h3>Crystals, Crochet, & Chaos</h3>
+        <div class="artist">Tiffany Brooke</div>
+
+        <div class="track">
+          <div class="track-name">On Your Way</div>
+          <audio controls preload="none">
+            <source src="3..%20On%20Your%20Way.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Just One More Row</div>
+          <audio controls preload="none">
+            <source src="Just%20One%20More%20Row.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Finished Is Better Than Flawless</div>
+          <audio controls preload="none">
+            <source src="22.%20Finished%20Is%20Better%20Than%20Flawless.m4a" type="audio/mp4">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Crystals, Crochet, & Chaos</div>
+          <audio controls preload="none">
+            <source src="6.%20Crystals%2C%20Crochet%2C%20%26%20Chaos.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </article>
+
+    <article class="album">
+      <img class="album-cover" src="images/IMG_6161.jpeg" alt="Vitamin C album cover">
+      <div>
+        <h3>Vitamin C</h3>
+        <div class="artist">Tiffany Brooke</div>
+
+        <div class="track">
+          <div class="track-name">Be A Pirate</div>
+          <audio controls preload="none">
+            <source src="Be%20a%20pirate%20(USE).mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Dirty Sea Pirate (Remaster 2)</div>
+          <audio controls preload="none">
+            <source src="1.Dirty%20Sea%20Pirate%20(Remaster%202).mp3" type="audio/mpeg">
+          </audio>
+        </div>
+
+        <div class="track">
+          <div class="track-name">Dirty Sea Pirate (EDM Remix)</div>
+          <audio controls preload="none">
+            <source src="Bonus%202.%20Dirty%20Sea%20Pirate%20(EDM%20Remix).mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="shop" id="shop">
+  <div class="wrap">
+    <div class="shop-panel">
+      <div class="eyebrow">My digital shop</div>
+      <h2>Find something <span class="accent">fun.</span></h2>
+      <p>
+        Maps, guides, digital creations, and other projects
+        available in my Gumroad shop.
+      </p>
+      <a class="btn" href="https://tiffanybrooke13.gumroad.com/" target="_blank">
+        Shop on Gumroad
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="connect" id="connect">
+  <div class="wrap">
+    <div class="eyebrow">Come say hello</div>
+    <h2>Let's <span class="accent">connect.</span></h2>
+    <p>Find more of my projects and creations around the internet.</p>
+
+    <div class="buttons" style="justify-content:center;">
+      <a class="btn purple" href="https://linktr.ee/tiffanybrooke2015" target="_blank">LINKTREE</a>
+      <a class="btn" href="https://tiffanybrooke13.gumroad.com/" target="_blank">GUMROAD SHOP</a>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-<div class="wrap footer-row">
-<span>© 2026 Tiffany Brooke. Made with a little sparkle and a lot of heart.</span>
-<span>Creative portfolio · Greers Ferry Lake, Arkansas</span>
-</div>
+  <div class="wrap">
+    Made with creativity, a little chaos, and <span>lots of teal.</span>
+    <br>
+    © 2026 Tiffany Brooke
+  </div>
 </footer>
 
 </body>
